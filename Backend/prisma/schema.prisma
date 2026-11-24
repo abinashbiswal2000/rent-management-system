@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model OccupantCount {
+  id        Int    @id @default(autoincrement())
+  yearMonth String @unique // "2026-10"
+  r1        Int    @default(0)
+  r2        Int    @default(0)
+  r3        Int    @default(0)
+  r4        Int    @default(0)
+  r5        Int    @default(0)
+  r6        Int    @default(0)
+  r7        Int    @default(0)
+  r8        Int    @default(0)
+  r9        Int    @default(0)
+  r10       Int    @default(0)
+  r11       Int    @default(0)
+  r12       Int    @default(0)
+  r13       Int    @default(0)
+
+  @@index([yearMonth])
+}
+
+model RoomBillsRecords {
+  id        Int    @id @default(autoincrement())
+  yearMonth String @unique // "2026-10"
+  r1        Int    @default(0)
+  r2        Int    @default(0)
+  r3        Int    @default(0)
+  r4        Int    @default(0)
+  r5        Int    @default(0)
+  r6        Int    @default(0)
+  r7        Int    @default(0)
+  r8        Int    @default(0)
+  r9        Int    @default(0)
+  r10       Int    @default(0)
+  r11       Int    @default(0)
+  r12       Int    @default(0)
+  r13       Int    @default(0)
+
+  @@index([yearMonth])
+}
+
+model MeterReadings {
+  id        Int    @id @default(autoincrement())
+  yearMonth String @unique // "2026-10"
+  r1        Int    @default(0)
+  r2        Int    @default(0)
+  r3        Int    @default(0)
+  r4        Int    @default(0)
+  r5        Int    @default(0)
+  r6        Int    @default(0)
+  r7        Int    @default(0)
+  r8        Int    @default(0)
+  r9        Int    @default(0)
+  r10       Int    @default(0)
+  r11       Int    @default(0)
+  r12       Int    @default(0)
+  r13       Int    @default(0)
+
+  @@index([yearMonth])
+}
